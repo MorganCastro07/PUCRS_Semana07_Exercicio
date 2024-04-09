@@ -1,0 +1,92 @@
+    ESTRUTURA DE SELEÇÃO MÚLTIPLA ESCOLHA: SWITCH CASE
+
+Fazer um programa para ler um valor inteiro de 1 a 7 representando
+um dia da semana (sendo 1 = domingo, 2 = segunda, e assim por
+diante). Escrever um programa que represente o dia da semana
+correspondente, conforme exemplos:
+
+----------------------------------------------------------------------
+
+import java.util.Scanner;
+
+public class Dia_da_Semana
+{
+    public static void main (String[]args){
+        
+        Scanner dados = new Scanner(System.in);
+        String SEMANA;
+        int DIA;
+        
+        System.out.println("DIGITA O NÚMERO DO DIA: ");
+        System.out.println();
+        DIA = dados.nextInt();
+        
+        switch (DIA){
+            case 1:
+               SEMANA = ("DOMINGO");
+                break;
+            case 2:
+                SEMANA = ("SEGUNDA-FEIRA");
+                break;
+            case 3:
+               SEMANA = ("TERÇA-FEIRA");
+                break;
+            case 4:
+                SEMANA = ("QUARTA-FEIRA");
+                break;
+            case 5:
+               SEMANA = ("QUINTA-FEIRA");
+                break;
+            case 6:
+               SEMANA = ("SEXTA-FEIRA");
+                break;
+            case 7:
+               SEMANA = ("SABADO");
+                break;
+            default:
+                SEMANA = ("CAMPO INVALIDO");
+                break;
+        }
+    
+        System.out.println("DIA DA SEMANA: " + SEMANA );
+    }
+}
+
+-----------------------------------------------------------------------
+
+Exemplo de Estrutura de seleção encadeada:
+IF ... ELSE / IF ... ELSE / IF ... ELSE
+
+import java.util.Scanner;
+
+public class Dia_da_Semana_if_else_if
+{
+    public static void main (String[]args){
+        
+        Scanner dados = new Scanner(System.in);
+        String SEMANA;
+        int DIA;
+        
+        System.out.println("DIGITA O NÚMERO DO DIA 1 ATÉ 7: ");
+        DIA = dados.nextInt();
+        
+        if (DIA ==1){
+            SEMANA = ("DOMINGO");
+        }else if (DIA ==2){
+            SEMANA = ("SEGUNDA-FEIRA");
+        }else if (DIA ==3){
+            SEMANA = ("TERÇA-FEIRA");
+        }else if (DIA ==4){
+            SEMANA = ("QUARTA-FEIRA");
+        }else if (DIA ==5){
+            SEMANA = ("QUINTA-FEIRA");
+        }else if (DIA ==6){
+            SEMANA = ("SEXTA-FEIRA");
+        }else if (DIA ==7){
+            SEMANA = ("SABADO");
+        }else{
+            SEMANA = "NÚMERO INVALIDO, DIGITE O NÚMERO DE 1 A 7";
+        }
+        System.out.println("DIA DA SEMANA: " + SEMANA );
+    }
+}
