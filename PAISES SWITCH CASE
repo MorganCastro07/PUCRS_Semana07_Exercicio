@@ -1,0 +1,54 @@
+Países podem ser identificados por meio de um código. Assim como
+informações adicionais desses países podem ser escolhidas pelo usuário.
+Nesse sentido, faça um programa em Java, que o usuário insira um código
+para cada país com a opção de código inválido. Considere três países
+quaisquer. Em seguida, forneça informações adicionais com base na escolha
+feita pelo usuário. As informações podem ser a língua oficial de cada país e
+não foi possível determinar a língua oficial.
+
+-------------------------------------------------------------------
+
+import java.util.Scanner;
+public class Países_switch_case
+{
+    public static void main(String[]args){
+        
+        Scanner dados = new Scanner(System.in);
+        
+        int Paises;
+        
+        System.out.println("DIGITE O CODIGO DO PAÍS");
+        System.out.println("2741 - PAÍS: INGLATERRA");
+        System.out.println("1845 - PAÍS: COREIA DO SUL");
+        System.out.println("4545 - PAÍS: CHINA");
+        Paises = dados.nextInt();
+        
+        switch (Paises){
+            
+            case 2741:
+                System.out.println("PAÍS: INGLATERRA");
+                System.out.println("CAPITAL: LONDRES");
+                System.out.println("LINGUA OFICIAL: INGLÊS");
+                System.out.println("POPULAÇÃO: 56.550.138");
+                System.out.println("MOEDA: LIBRA ESTERLINA");
+                break;
+            case 1845:
+                System.out.println("PAÍS: COREIA DO SUL");
+                System.out.println("CAPITAL: SEUL");
+                System.out.println("LINGUA OFICIAL: COREANO");
+                System.out.println("POPULAÇÃO: 51.305.000");
+                System.out.println("MOEDA: WON SUL-COREANO");
+                break;
+            case 4545:
+                System.out.println("PAÍS: CHINA");
+                System.out.println("CAPITAL: PEQUIM (BEIJING");
+                System.out.println("LINGUA OFICIAL: MANDARIM");
+                System.out.println("POPULAÇÃO: 1.419.257.177");
+                System.out.println("MOEDA: RENMINBI");
+                break;
+            default:
+                System.out.println("CÓDIGO INCORRETO");
+                break;
+        }
+    }
+}
