@@ -1,0 +1,52 @@
+Faça um programa que lê o saldo inicial de uma conta e o
+número da opção desejada.
+Opção 1: mostra o saldo
+Opção 2: saca um valor e mostra o saldo
+Opção 3: credita um valor e mostra o saldo
+Qualquer outro número de opção: informar “Opção Inválida”
+
+----------------------------------------------------------------
+
+import java.util.Scanner;
+
+public class Conta_Bancaria_switch_case
+{
+    public static void main (String[]args){
+        
+        Scanner dados = new Scanner(System.in);
+        
+        double Saldo_Inicial = 2500, Saque, Saldo_Atual, Credito;
+        int OPCAO;
+        
+        System.out.println("BEM VINDO AO NUBANK!");
+        System.out.println();
+        System.out.println("OPÇÃO 1 - SALDO DA CONTA");
+        System.out.println("OPÇÃO 2 - SAQUE UM VALOR");
+        System.out.println("OPÇÃO 3 - DEPOSITAR UM VALOR");
+        OPCAO = dados.nextInt();
+                          
+        switch (OPCAO){
+            case 1:
+                System.out.println("SALDO DA CONTA: R$" + Saldo_Inicial);
+                break;
+            case 2:
+                System.out.println("DIGITE O VALOR DO SAQUE");
+                Saque = dados.nextDouble();
+                System.out.println();
+                Saldo_Atual = Saldo_Inicial - Saque ;
+                System.out.println("SEU SALDO ATUAL: R$" + Saldo_Atual);
+                break;
+            case 3:
+                System.out.println("DIGITE O VALOR DO DEPOSITO");
+                Credito = dados.nextDouble();
+                System.out.println();
+                Saldo_Atual = Saldo_Inicial + Credito;
+                System.out.println("DEPOSITADO COM SUCESSO!!");
+                System.out.println("SALDO DA CONTA: R$" + Saldo_Atual);
+                break;
+            default:
+                System.out.println("OPÇÃO INVÁLIDO");
+                break;
+        }
+    }
+}
