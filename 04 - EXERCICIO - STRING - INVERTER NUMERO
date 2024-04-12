@@ -1,0 +1,26 @@
+Faça um programa que leia um número inteiro e, utilizando a classe String,
+mostre o número invertido. Ex: Lê 45678 e mostra 87654.
+
+---------------------------------------------------------------------------
+
+import java.util.Scanner;
+public class InverteNumero_04 {
+    public static void main(String[] args) {
+        Scanner dados = new Scanner(System.in);
+        
+        int Numero, Tamanho;
+        
+        System.out.println("Digite um número inteiro:");
+        Numero = dados.nextInt();
+        
+        String NumInt = "" + Numero;
+        String NumVers = "";
+        
+        Tamanho = NumInt.length();
+        for (int i = 0; i < Tamanho; i++) {
+            NumVers = NumInt.charAt(i) + NumVers;
+        }
+        
+        System.out.println("Número invertido: " + NumVers);
+    }
+}
