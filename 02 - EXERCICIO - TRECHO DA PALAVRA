@@ -1,0 +1,29 @@
+Faça um programa que leia uma palavra e um trecho de uma palavra. 
+O programa deve informar se a palavra lida possui o trecho de palavra informado
+pelo usuário. EX: PALAVRA: casaco TRECHO: asa, resultado, contém asa.
+
+--------------------------------------------------------------------------------
+
+import java.util.Scanner;
+
+public class TrechoPalavra_02 {
+
+    public static void main(String[] args) {
+        
+        Scanner dados = new Scanner(System.in);
+
+        System.out.print("ESCREVA SUA PALAVRA AQUI");
+        String palavra = dados.nextLine().toUpperCase();
+
+        System.out.print("ESCREVA UM TRECHO DA PALAVRA: ");
+        String trecho = dados.nextLine().toUpperCase();
+
+        boolean Trecho = palavra.contains(trecho);
+
+        if (Trecho) {
+            System.out.println("A palavra " + palavra + " contém o trecho " + trecho + ".");
+        } else {
+            System.out.println("A palavra " + palavra + " não contém o trecho " + trecho + ".");
+        }
+    }
+}
