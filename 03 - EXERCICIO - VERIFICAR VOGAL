@@ -1,0 +1,31 @@
+Faça um programa que leia uma palavra e que informa 
+se a palavra contém uma das vogais A,E,I,O,U.
+
+----------------------------------------------------------
+
+import java.util.Scanner;
+
+public class VerificarVogal_03 {
+        
+    public static void main(String[] args) {
+        
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("ESCREVA SUAS PALAVRAS AQUI: ");
+        String palavra = scanner.nextLine().toUpperCase();
+
+        int numeroVogais = 0;
+
+        for (char letra : palavra.toCharArray()) {
+            if (letra == 'A' || letra == 'E' || letra == 'I' || letra == 'O' || letra == 'U') {
+                numeroVogais++;
+            }
+        }
+
+        if (numeroVogais > 0) {
+            System.out.println("A PALAVRA CONTÉM " + numeroVogais + " VOGAL.");
+        } else {
+            System.out.println("A PALAVRA NÃO CONTÉM VOGAL.");
+        }
+    }
+}
