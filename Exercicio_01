@@ -1,0 +1,47 @@
+Faça um programa em java que lê uma palavra, uma vogal (garanta isso), e uma
+posição específica da palavra. O programa deve informar se a posição informada
+da palavra possui a vogal tambem informada pelo usuário. 
+EX: Palavra: cachorro, Vogal: o, Posição 7, Resultado, não contém O na posição 7.
+
+---------------------------------------------------------------------------------
+
+import java.util.Scanner;
+
+public class VogalPosicao_01 {
+
+    public static void main(String[] args) {
+        Scanner dados = new Scanner(System.in);
+
+        System.out.print("DIGITE UMA PALAVRA: ");
+        String palavra = dados.nextLine();
+
+        System.out.print("ESCOLHA UMA VOGAL (A,E,I,O,U): ");
+        String vogal = dados.nextLine().toUpperCase();
+
+        char vogais = vogal.charAt(0);
+
+        if (!isVogal(vogais)) {
+            System.out.println("VOGAL INCORRETO");
+        }
+
+        System.out.print("DIGITE A POSIÇÃO DA VOGAL (1 A " + palavra.length() + "): ");
+        
+        int posicao = dados.nextInt();
+
+        if (posicao < 1 || posicao > palavra.length()) {
+            System.out.println("POSIÇÃO INVÁLIDO. DIGITE UM NÚMERO ENTRE 1 E " + palavra.length() + ".");
+        }
+
+        char vogalNaPosicao = palavra.charAt(posicao - 1);
+
+        if (vogalNaPosicao == vogais) {
+            System.out.println("A PALAVRA " + palavra + " CONTÉM A VOGAL " + vogal + " NA POSIÇÃO " + posicao + ".");
+        } else {
+            System.out.println("A PALAVRA " + palavra + " NÃO CONTÉM A VOGAL " + vogal + " NA POSIÇÃO " + posicao + ".");
+        }
+    }
+
+    private static boolean isVogal(char caractere) {
+        return caractere == 'A' || caractere == 'E' || caractere == 'I' || caractere == 'O' || caractere == 'U';
+    }
+}
