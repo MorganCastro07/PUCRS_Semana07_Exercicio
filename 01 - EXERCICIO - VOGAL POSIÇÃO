@@ -10,6 +10,7 @@ import java.util.Scanner;
 public class VogalPosicao_01 {
 
     public static void main(String[] args) {
+
         Scanner dados = new Scanner(System.in);
 
         System.out.print("DIGITE UMA PALAVRA: ");
@@ -24,15 +25,15 @@ public class VogalPosicao_01 {
             System.out.println("VOGAL INCORRETO");
         }
 
-        System.out.print("DIGITE A POSIÇÃO DA VOGAL (1 A " + palavra.length() + "): ");
+        System.out.print("DIGITE A POSIÇÃO DA VOGAL (0 A " + palavra.length() + "): ");
         
         int posicao = dados.nextInt();
 
-        if (posicao < 1 || posicao > palavra.length()) {
-            System.out.println("POSIÇÃO INVÁLIDO. DIGITE UM NÚMERO ENTRE 1 E " + palavra.length() + ".");
+        if (posicao < 0 || posicao > palavra.length()) {
+            System.out.println("POSIÇÃO INVÁLIDO. DIGITE UM NÚMERO ENTRE 0 E " + palavra.length() + ".");
         }
 
-        char vogalNaPosicao = palavra.charAt(posicao - 1);
+        char vogalNaPosicao = palavra.charAt(posicao - 0);
 
         if (vogalNaPosicao == vogais) {
             System.out.println("A PALAVRA " + palavra + " CONTÉM A VOGAL " + vogal + " NA POSIÇÃO " + posicao + ".");
