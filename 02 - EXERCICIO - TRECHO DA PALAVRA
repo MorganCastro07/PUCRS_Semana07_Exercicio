@@ -12,11 +12,13 @@ public class TrechoPalavra_02 {
         
         Scanner dados = new Scanner(System.in);
 
+        String palavra, trecho;
+
         System.out.print("ESCREVA SUA PALAVRA AQUI");
-        String palavra = dados.nextLine().toUpperCase();
+        palavra = dados.nextLine().toUpperCase();
 
         System.out.print("ESCREVA UM TRECHO DA PALAVRA: ");
-        String trecho = dados.nextLine().toUpperCase();
+        trecho = dados.nextLine().toUpperCase();
 
         boolean Trecho = palavra.contains(trecho);
 
