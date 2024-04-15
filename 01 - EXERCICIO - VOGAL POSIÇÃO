@@ -7,42 +7,39 @@ EX: Palavra: cachorro, Vogal: o, Posição 7, Resultado, não contém O na posi�
 
 import java.util.Scanner;
 
-public class VogalPosicao_01 {
-
-    public static void main(String[] args) {
-
+public class VogalPosicao_01
+{
+    public static void main(String[] args){
+        
         Scanner dados = new Scanner(System.in);
-
-        System.out.print("DIGITE UMA PALAVRA: ");
-        String palavra = dados.nextLine();
+        
+        String palavra, vogal;
+        
+        char letra=' ';
+        int posicao;
+        
+        System.out.println("DIGITE UMA PALAVRA: ");
+        palavra = dados.nextLine().toUpperCase();
 
         System.out.print("ESCOLHA UMA VOGAL (A,E,I,O,U): ");
-        String vogal = dados.nextLine().toUpperCase();
-
-        char vogais = vogal.charAt(0);
-
-        if (!isVogal(vogais)) {
-            System.out.println("VOGAL INCORRETO");
-        }
-
-        System.out.print("DIGITE A POSIÇÃO DA VOGAL (0 A " + palavra.length() + "): ");
+        vogal = dados.nextLine().toUpperCase();
         
-        int posicao = dados.nextInt();
-
-        if (posicao < 0 || posicao > palavra.length()) {
-            System.out.println("POSIÇÃO INVÁLIDO. DIGITE UM NÚMERO ENTRE 0 E " + palavra.length() + ".");
+        if (vogal.length()==1)
+            letra = vogal.charAt(0);
+            
+        if (letra =='A' || letra =='E' || letra =='I' || letra =='O' || letra =='U'){
+            System.out.print("DIGITE A POSIÇÃO DA VOGAL (0 A " + (palavra.length()-1));
+            posicao = dados.nextInt();
+            if (posicao<=palavra.length()-1){
+                if (letra==palavra.charAt(posicao))
+                    System.out.println("CONTÉM VOGAL NESTA POSIÇÃO");
+                else
+                    System.out.println("NÃO CONTÉM VOGAL NESTA POSIÇÃO");
+            }
+            else
+                System.out.println("POSIÇÃO INVÁLIDA");
         }
-
-        char vogalNaPosicao = palavra.charAt(posicao - 0);
-
-        if (vogalNaPosicao == vogais) {
-            System.out.println("A PALAVRA " + palavra + " CONTÉM A VOGAL " + vogal + " NA POSIÇÃO " + posicao + ".");
-        } else {
-            System.out.println("A PALAVRA " + palavra + " NÃO CONTÉM A VOGAL " + vogal + " NA POSIÇÃO " + posicao + ".");
-        }
-    }
-
-    private static boolean isVogal(char caractere) {
-        return caractere == 'A' || caractere == 'E' || caractere == 'I' || caractere == 'O' || caractere == 'U';
+        else
+            System.out.println("NÃO SÃO VOGAIS");
     }
 }
