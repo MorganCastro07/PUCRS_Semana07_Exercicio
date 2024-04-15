@@ -11,21 +11,19 @@ public class TrechoPalavra_02 {
     public static void main(String[] args) {
         
         Scanner dados = new Scanner(System.in);
-
+        
         String palavra, trecho;
-
-        System.out.print("ESCREVA SUA PALAVRA AQUI");
+        
+        System.out.print("ESCREVA SUA PALAVRA AQUI: ");
         palavra = dados.nextLine().toUpperCase();
 
         System.out.print("ESCREVA UM TRECHO DA PALAVRA: ");
         trecho = dados.nextLine().toUpperCase();
 
-        boolean Trecho = palavra.contains(trecho);
-
-        if (Trecho) {
-            System.out.println("A palavra " + palavra + " contém o trecho " + trecho + ".");
-        } else {
-            System.out.println("A palavra " + palavra + " não contém o trecho " + trecho + ".");
+        if(palavra.contains(trecho)) {
+            System.out.println("A PALAVRA: " + palavra + " CONTÉM " + trecho + ".");
+        }else{
+            System.out.println("A PALAVRA: " + palavra + " NÃO CONTÉM " + trecho + ".");
         }
     }
 }
