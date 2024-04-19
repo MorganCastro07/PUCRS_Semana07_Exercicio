@@ -1,0 +1,18 @@
+import java.util.Scanner;
+public class ContemSequencia {
+    
+    public static boolean contemSequencia(String texto, String sequencia) {
+    
+        return texto.contains(sequencia);
+    }
+        
+        public static void main(String[] args) {
+            String textoExemplo = "Olá, mundo!";
+            
+            String sequenciaExemplo = "mundo";
+            
+            boolean resultado = contemSequencia(textoExemplo, sequenciaExemplo);
+            
+            System.out.println(resultado);
+        }
+}
