@@ -1,0 +1,27 @@
+
+
+import java.util.Scanner;
+public class TRABALHO01
+{
+    public static void main(String[]args){
+        
+        int count1 = 500, somaimpar = 0, somapar = 0; 
+        int countpar = 0, countimpar = 0;       
+        while(count1<=700)
+        {
+            if(count1%2==0){
+            System.out.println("NÚMERO PAR É: " + count1);
+            somapar += count1;
+            count1++;
+            countpar++;
+            }else{
+            System.out.println("NÚMERO IMPAR É: " + count1);
+            somaimpar += count1;
+            count1++;
+            countimpar++;
+            }
+        } 
+        System.out.println("EXISTEM " + countpar + " NÚMEROS PARES ENTRE 500 E 700 E SUA SOMA E: "+ somapar);
+        System.out.println("EXISTEM " + countimpar + " NÚMEROS IMPARES ENTRE 500 E 700 E SUA SOMA E: "+ somaimpar);
+    }
+}
