@@ -1,0 +1,31 @@
+ESCREVA UM PROGRAMA QUE VERIFICA SE UM NÚMERO FORNECIDO PELO USUÁRIO E PRIMO OU NÃO.
+
+---------------------------------------------------------------------
+
+import java.util.Scanner;
+public class Exercicio_03
+{
+    public static void main(String[] args){
+        
+        Scanner dados = new Scanner(System.in);
+        
+        System.out.println("DIGITE UM NÚMERO INTEIRO POSITIVO: ");
+        int numero = dados.nextInt();
+        boolean Num_Primo = true;
+        int i = 2;
+             
+        while (i <= numero / 2) {
+                if (numero % i == 0){
+                Num_Primo = false;
+                break;
+            }
+            i++;
+        }
+    
+        if (Num_Primo){
+            System.out.println(numero + " E UM NÚMERO PRIMO.");
+        } else {
+            System.out.println(numero + " NÃO E UM NÚMERO PRIMO.");
+        }
+    }
+}
