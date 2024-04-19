@@ -1,0 +1,24 @@
+ESCREVA UM PROGRAMA QUE SOLICITA AO USUÁRIO UM NÚMERO INTEIRO POSITIVO E,
+EM SEGUIDA, CALCULA A SOMA DE TODOS OS NÚMEROS PARES DE 1 ATÉ O NÚMERO FORNECIDO.
+
+----------------------------------------------------------------
+
+import java.util.Scanner;
+public class Exercicio_02
+{
+    public static void main(String[] args){
+        
+        Scanner dados = new Scanner(System.in);
+        
+        int numero, soma = 0, i = 2;
+        
+        System.out.println("DIGITE UM NÚMERO INTEIRO POSITIVO: ");
+        numero = dados.nextInt();
+        
+        while (i <= numero) {
+            soma += i;
+            i += 2;
+        }
+        System.out.println("A SOMA DOS NÚMEROS PARES ATÉ " + numero + " É: " + soma);
+    }
+}
