@@ -9,7 +9,7 @@ Qualquer outro número de opção: informar “Opção Inválida”
 
 import java.util.Scanner;
 
-public class TRABALHO03 {
+public class Conta_Bancaria {
     
     public static void main(String[] args) {
         
