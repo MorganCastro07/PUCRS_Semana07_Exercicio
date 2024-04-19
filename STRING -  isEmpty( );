@@ -1,0 +1,14 @@
+import java.util.Scanner;
+public class StringVazia_isEmpty {
+    
+    public static void main(String[] args) {
+        
+        String Texto = ""; // String vazia
+        
+        if (Texto.isEmpty()){
+            System.out.println("A string está vazia.");
+        }else{
+            System.out.println("A string não está vazia.");
+        }
+    }
+}
