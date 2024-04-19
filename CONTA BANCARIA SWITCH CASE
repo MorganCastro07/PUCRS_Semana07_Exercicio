@@ -9,17 +9,19 @@ Qualquer outro número de opção: informar “Opção Inválida”
 
 import java.util.Scanner;
 
-public class Conta_Bancaria_switch_case
+public class Conta_Bancaria
 {
     public static void main (String[]args){
         
         Scanner dados = new Scanner(System.in);
         
-        double Saldo_Inicial = 2500, Saque, Saldo_Atual, Credito;
+        double Saldo_Inicial = 0, Saque, Saldo_Atual, Credito;
         int OPCAO;
         
-        System.out.println("BEM VINDO AO NUBANK!");
+        System.out.println("BEM VINDO AO BANK DA PUCRS!");
         System.out.println();
+        System.out.println("INFORME O SALDO DA CONTA");
+        Saldo_Inicial = dados.nextInt();
         System.out.println("OPÇÃO 1 - SALDO DA CONTA");
         System.out.println("OPÇÃO 2 - SAQUE UM VALOR");
         System.out.println("OPÇÃO 3 - DEPOSITAR UM VALOR");
@@ -32,8 +34,11 @@ public class Conta_Bancaria_switch_case
             case 2:
                 System.out.println("DIGITE O VALOR DO SAQUE");
                 Saque = dados.nextDouble();
+                    if (Saque>Saldo_Inicial){
+                    System.out.println("SALDO INSUFICIENTE"); 
+                    break;}
                 System.out.println();
-                Saldo_Atual = Saldo_Inicial - Saque ;
+                Saldo_Atual = Saldo_Inicial - Saque;
                 System.out.println("SEU SALDO ATUAL: R$" + Saldo_Atual);
                 break;
             case 3:
