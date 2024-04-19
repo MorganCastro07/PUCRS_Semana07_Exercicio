@@ -1,0 +1,13 @@
+import java.util.Scanner;
+
+public class String_toUpperCase {
+    public static void main(String[] args) {
+        String texto = "exemplo de texto"; //texto em minusculo
+        
+        String textoMaiusculo = texto.toUpperCase();
+        
+        System.out.println("Texto Original: " + texto);
+        System.out.println();
+        System.out.println("Texto em MAIÚSCULAS: " + textoMaiusculo); // Conversão de texto para Maiusculo
+    }
+}
