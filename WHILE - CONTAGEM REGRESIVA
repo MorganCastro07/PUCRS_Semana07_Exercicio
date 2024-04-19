@@ -1,0 +1,21 @@
+ESCREVA UM PROGRAMA QUE SOLICITA UM NÚMERO INTEIRO POSITIVO AO USUÁRIO E,
+EM SEGUIDA, IMPRIME UMA CONTAGEM REGRESIVA DESSE NÚMERO ATÉ 1.
+
+------------------------------------------------------------------------
+
+import java.util.Scanner;
+public class Exercicio_01
+{
+    public static void main(String[] args){
+        
+        Scanner dados = new Scanner(System.in);
+        
+        System.out.println("DIGITE UM NÚMERO INTEIRO POSITIVO: ");
+        int numero = dados.nextInt();
+        
+        while (numero > 0 ) {
+            System.out.println(numero);
+            numero--;
+        }
+    }
+}
